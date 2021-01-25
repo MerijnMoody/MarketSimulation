@@ -11,8 +11,9 @@ Plot.py:
   - plots a graph of the average buyer and seller prices and their difference with a shaded standard deviation
   - plots a graph of the average buy and sell price difference for different p-values
   
-To reproduce the figures used in the report, run Plot.py which uses the data.csv file, which is the data file that we used for the report.
+To reproduce the graphs used in the report, run Plot.py which uses the data.csv file, which is the data file that we used for the report.
 Data.csv was generated using the generate_data() function in Simulation.py with the following parameters:
+
 Global parameters:
   - n_buyers = 10000
   - n_sellers = 500
@@ -26,6 +27,7 @@ Function parameters:
   - n_days = 500
   
 Generating this data took a long time (>10hrs) so to get a more manageable simulation the following parameters can be used:
+
 Global parameters:
   - n_buyers = 1000
   - n_sellers = 50
@@ -36,4 +38,26 @@ Global parameters:
 Function parameters:
   - p_list = [0.5, 0.002, 0.0025, 0.001, 0.0015]
   - n_iter = 10
-  - n_days = 300
+  - n_days = 500
+
+To reproduce the bar plot used in the report, run Simulation.py, with the following parameters:
+
+Global parameters:
+  - n_buyers = 20
+  - n_sellers = 10
+  - starting_stock = 2
+  - price_var = 0.05
+  - max_hunger = 20
+  
+Function parameters:
+  - p_list = [0.5]
+  - n_iter = 1
+  - n_days = 500
+
+The dependencies for the code are:
+ - python 3.8
+ - itertools
+ - random
+ - matplotlib
+ - csv
+ - pylab
