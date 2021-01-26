@@ -39,6 +39,8 @@ Function parameters:
   - n_iter = 10
   - n_days = 500
 
+Also change the list i_iter in Plot.py to [0, 1, 2, 3, 4].
+
 To reproduce the bar plot used in the report, run Simulation.py, with the following parameters:
 
 Global parameters:
