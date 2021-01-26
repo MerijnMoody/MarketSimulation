@@ -60,6 +60,7 @@ def std(deviation_list):
 
 
 # General plot parameters.
+# Many of the plotting parameters were taken from the tutorial https://towardsdatascience.com/an-introduction-to-making-scientific-publication-plots-with-python-ea19dfa7f51e.
 plt.rcParams['font.size'] = 22
 plt.rcParams['axes.linewidth'] = 2
 x = [i for i in range(500)]
