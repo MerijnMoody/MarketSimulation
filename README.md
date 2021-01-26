@@ -1,5 +1,4 @@
 # MarketSimulation
-Project Computational Science Market Simulation Code
 The code consists of two files, Simulation.py and Plot.py. They do the following:
 
 Simulation.py:
@@ -53,6 +52,9 @@ Function parameters:
   - p_list = [0.5]
   - n_iter = 1
   - n_days = 500
+
+The exact data used to generate the bar plot was not stored as the simulation behind this data only took a short time.
+
 
 The dependencies for the code are:
  - python 3.8
