@@ -93,8 +93,8 @@ tick(ax)
 std_bool = False  # Determines if we plot the std. Can reduce clarity
 for j in range(len(i_list)):
     i = i_list[j]
-    final_list_buyer = y_list[2 * i + 1]
-    final_list_seller = y_list[2 * i]
+    final_list_buyer = y_list[2 * i]
+    final_list_seller = y_list[2 * i + 1]
     x = [i for i in range(500)]
     y_buyer = [sum(i)/n_iter for i in final_list_buyer]
     y_buyer_std = [std(i) for i in final_list_buyer]
@@ -118,8 +118,8 @@ plt.savefig('PriceDifferenceP.png', dpi=300,
 
 # A graph of the average buying and selling prices with standard deviations.
 fig = plt.figure(figsize=(11, 7))
-final_list_buyer = y_list[0]
-final_list_seller = y_list[1]
+final_list_buyer = y_list[1]
+final_list_seller = y_list[0]
 x = [i for i in range(500)]
 y_buyer = [sum(i)/n_iter for i in final_list_buyer]
 y_buyer_std = [std(i) for i in final_list_buyer]
