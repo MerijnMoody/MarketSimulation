@@ -35,7 +35,7 @@ Global parameters:
   - max_hunger = 20
   
 Function parameters:
-  - p_list = [0.5, 0.002, 0.0025, 0.001, 0.0015]
+  - p_list = [0.5, 0.1, 0.025, 0.02, 0.01]
   - n_iter = 10
   - n_days = 500
 
