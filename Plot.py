@@ -130,18 +130,18 @@ y_seller_std = [std(i) for i in final_list_seller]
 # Main graph.
 ax = fig.add_axes([0, 0.3, 1, 0.7])
 ax.set_ylabel('Price', labelpad=10)
-ax.set_xlim(0, 300)
+ax.set_xlim(0, 500)
 ax.set_ylim(0.17, 0.83)
 tick(ax)
 
 
-ax.plot(x, y_buyer, color='red', label='buyer')
-ax.fill_between(x, [y_buyer[i] - y_buyer_std[i] for i in range(n_days)],
-                [y_buyer[i] + y_buyer_std[i] for i in range(n_days)],
-                alpha=0.2, color='red')
-ax.plot(x, y_seller, color='blue', label='seller')
+ax.plot(x, y_seller, color='red', label='seller')
 ax.fill_between(x, [y_seller[i] - y_seller_std[i] for i in range(n_days)],
                 [y_seller[i] + y_seller_std[i] for i in range(n_days)],
+                alpha=0.2, color='red')
+ax.plot(x, y_buyer, color='blue', label='buyer')
+ax.fill_between(x, [y_buyer[i] - y_buyer_std[i] for i in range(n_days)],
+                [y_buyer[i] + y_buyer_std[i] for i in range(n_days)],
                 alpha=0.2, color='blue')
 ax.legend(bbox_to_anchor=(1, 1), loc=1, frameon=False, fontsize=16)
 ax.set_xticklabels([])
@@ -150,9 +150,9 @@ ax.set_title("Average buying and selling prices")
 
 # Bottom part of graph with buying/selling price difference.
 ax2 = fig.add_axes([0, 0, 1, 0.3])
-ax2.set_xlabel('Time', labelpad=10)
+ax2.set_xlabel('Iterations (days)', labelpad=10)
 ax2.set_ylabel('Price difference', labelpad=10)
-ax2.set_xlim(0, 300)
+ax2.set_xlim(0, 500)
 ax2.set_ylim(-0.03, 0.5)
 tick(ax2)
 ax2.plot(x, diff_list[0], label=r'$\rho = $' + str(p_list[0]))
